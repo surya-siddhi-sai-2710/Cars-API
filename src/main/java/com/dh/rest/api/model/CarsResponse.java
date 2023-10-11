@@ -2,13 +2,20 @@ package com.dh.rest.api.model;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Component
 public class CarsResponse {
 	
+	@JsonProperty("MODELNO")
 	private int MODELNO;
-	private String CNAME;
-	private int PRICE;
 	
+	@JsonProperty("CNAME")
+	private String CNAME;
+	
+	@JsonProperty("PRICE")
+	private int PRICE;
+		
 	//default constructor
 	public CarsResponse() {
 		super();

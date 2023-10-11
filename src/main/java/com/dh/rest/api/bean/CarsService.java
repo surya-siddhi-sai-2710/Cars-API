@@ -26,7 +26,7 @@ public class CarsService {
 			oCarsResponse.setPRICE(oCarsBackend.getPrice());
 			
 			System.out.println(oCarsResponse.toString());
-			oMessage.setBody("");
+//			oMessage.setBody("");
 			oMessage.setBody(oCarsResponse);
 
 		}
