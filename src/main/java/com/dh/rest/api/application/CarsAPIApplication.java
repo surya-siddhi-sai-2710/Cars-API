@@ -6,9 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("com.dh.*")
-public class RestApiEndpointsFrontendStoredProcedureApplication {
+public class CarsAPIApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestApiEndpointsFrontendStoredProcedureApplication.class, args);
+		SpringApplication.run(CarsAPIApplication.class, args);
 	}
 }

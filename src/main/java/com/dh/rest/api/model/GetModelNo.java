@@ -5,18 +5,18 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Component
-public class CarsModelNo {
+public class GetModelNo {
 	
 	@JsonProperty("modelno")
 	private int modelno;
 	
 	//default constructor
-	public CarsModelNo() {
+	public GetModelNo() {
 		super();
 	}
 	
 	//Parameterized constructor
-	public CarsModelNo(int modelno) {
+	public GetModelNo(int modelno) {
 		super();
 		this.modelno = modelno;
 	}

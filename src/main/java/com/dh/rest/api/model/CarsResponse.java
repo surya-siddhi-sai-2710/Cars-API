@@ -3,19 +3,19 @@ package com.dh.rest.api.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CarsFrontend {
+public class CarsResponse {
 	
 	private int MODELNO;
 	private String CNAME;
 	private int PRICE;
 	
 	//default constructor
-	public CarsFrontend() {
+	public CarsResponse() {
 		super();
 	}
 	
 	//constructor with parameters
-	public CarsFrontend(int mODELNO, String cNAME, int pRICE) {
+	public CarsResponse(int mODELNO, String cNAME, int pRICE) {
 		super();
 		MODELNO = mODELNO;
 		CNAME = cNAME;

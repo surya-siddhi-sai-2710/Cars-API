@@ -1,4 +1,4 @@
-package com.dh.rest.api.model;
+package com.dh.rest.api.backend.model;
 
 import org.springframework.stereotype.Component;
 
@@ -57,6 +57,4 @@ public class CarsBackend {
 	public String toString() {
 		return "CarsBackend [modelno=" + modelno + ", cname=" + cname + ", price=" + price + "]";
 	}
-	
-	
 }
