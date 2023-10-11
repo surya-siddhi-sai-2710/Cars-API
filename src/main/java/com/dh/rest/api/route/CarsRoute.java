@@ -3,17 +3,23 @@ package com.dh.rest.api.route;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import com.dh.rest.api.backend.model.CarsBackend;
+import com.dh.rest.api.backend.model.GetModelNo;
 import com.dh.rest.api.bean.CarsService;
 import com.dh.rest.api.model.CarsResponse;
-import com.dh.rest.api.model.GetModelNo;
 
 import org.apache.camel.component.jackson.JacksonDataFormat;
 
 @Component
 public class CarsRoute extends RouteBuilder{
+	
+	@Autowired
+	private Environment ev;
 	
 	@Override
 	public void configure() throws Exception{
@@ -29,7 +35,7 @@ public class CarsRoute extends RouteBuilder{
 		.log("log2")
 		.marshal().json(JsonLibrary.Jackson)
 		.log("${body}")
-		.to("http://localhost:8080/api/viewcar?bridgeEndpoint=true")		//calling DB endpoint
+		.to(ev.getProperty("ENV_URL"))		//calling DB endpoint
 		.log("log4")
 		.unmarshal(new JacksonDataFormat(CarsBackend.class)) 
 		.log("log5")

@@ -1,4 +1,4 @@
-package com.dh.rest.api.model;
+package com.dh.rest.api.backend.model;
 
 import org.springframework.stereotype.Component;
 
